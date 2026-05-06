@@ -2,6 +2,7 @@ import About from "./components/About";
 import DivElement from "./components/DivElement";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import MyProjects from "./components/MyProjects";
 
 
 
@@ -17,6 +18,9 @@ function App() {
       <Hero />
       <DivElement/>
       <About/>
+      <DivElement/>
+      <MyProjects/>
+      
     </main>
   );
 }

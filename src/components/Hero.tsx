@@ -11,7 +11,7 @@ const Hero=()=>{
       <div
       id='home'
       ref={ref}
-       className="w-120 mx-auto flex flex-col items-center justify-center gap-4 scroll-mt-40">
+       className="w-120 mx-auto flex flex-col items-center justify-center gap-4 scroll-mt-35">
         <div className="relative">
           <motion.img
             src={SalmonBhaoi}
@@ -33,9 +33,9 @@ const Hero=()=>{
           initial={{ opacity: 0, y: 200, scale: 0 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ delay: 2, duration: 1 }}
-          className="text-center text-2xl"
+          className="text-center text-2xl leading-10"
         >
-          <span className="font-bold text-black">Hello I'm Salmon bhoi</span>. I am{" "}
+          <span className="font-bold text-black">Hey I'm Salmon khan</span>. I am{" "}
           <span className="font-bold">full-stack developer</span> with{" "}
           <span>8 years</span> of experience. I enjoy building{" "}
           <span className="italic">sites & app</span>. My focus is{" "}
@@ -45,7 +45,7 @@ const Hero=()=>{
          initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0}}
           transition={{ delay: 2.4, duration: 1 }}
-         className="flex items-center justify-between gap-2">
+         className="flex items-center justify-between gap-2 mt-10">
           <div className="bg-black text-white px-4 py-2 group rounded-full flex items-center justify-center cursor-pointer">
             <div>Contact me here</div>
             <span className="ml-1 group-hover:translate-x-1">

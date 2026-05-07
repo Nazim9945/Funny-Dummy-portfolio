@@ -3,16 +3,25 @@ import { motion } from "motion/react";
 import useInview from "../hooks/useInview";
 
 
+const fadeIn = {
+  initial: { opacity: 0, y: 100 },
+
+  animate: { opacity: 1, y: 0, transition: { duration: 1 ,delay:0.35} },
+};
 const About = () => {
   const { ref } = useInview("about", 0.8);
   return (
     <motion.div
     ref={ref} 
-    initial={{opacity:0,y:100,scale:0}}
-    animate={{opacity:1,y:0,scale:1}}
-    transition={{delay:2.8,duration:1}}
+    variants={fadeIn}
+    initial="initial"
+    whileInView={"animate"}
+    viewport={{
+      once:true
+    }}
+   
     id="about"
-    className="max-w-180 leading-7 mx-auto text-center flex flex-col items-center gap-4 mb-40 scroll-mt-40">
+    className="max-w-180 leading-7 mx-auto text-center flex flex-col items-center gap-4 mb-40 scroll-mt-55">
       <div className="capitalize text-2xl">About me</div>
       <p>
         After graduating with a degree in{" "}

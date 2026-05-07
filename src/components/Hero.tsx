@@ -1,12 +1,17 @@
 import { motion } from 'motion/react';
-import SalmonBhaoi from '../../public/salmon bhoi.jpg'
+import SalmonBhaoi from '../../public/salmonbhoi.jpg'
 import { FaArrowRight, FaDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
+import useInview from '../hooks/useInview';
 
 
 
 const Hero=()=>{
+  const { ref } = useInview("home", 0.7);
     return (
-      <div className="w-120 mx-auto flex flex-col items-center justify-center gap-4">
+      <div
+      id='home'
+      ref={ref}
+       className="w-120 mx-auto flex flex-col items-center justify-center gap-4 scroll-mt-40">
         <div className="relative">
           <motion.img
             src={SalmonBhaoi}

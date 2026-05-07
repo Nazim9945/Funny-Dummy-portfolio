@@ -1,6 +1,8 @@
 
 import Card from "./Card"
 import Profile from '../../public/Lady.jpg'
+
+import useInview from "../hooks/useInview";
 const CardData: {
   title: string;
   description: string;
@@ -43,8 +45,9 @@ const CardData: {
   },
 ];
 const MyProjects = () => {
+  const {ref}=useInview("projects",0.2)
   return (
-    <div className="w-160 mx-auto ">
+    <div ref={ref} id="projects" className="w-160 mx-auto scroll-mt-30">
       <div className="text-2xl text-center mb-8">My Projects</div>
       <div className="flex flex-col gap-8">
         {CardData.map((data) => {

@@ -1,14 +1,18 @@
 import { motion } from "motion/react";
 
+import useInview from "../hooks/useInview";
+
 
 const About = () => {
+  const { ref } = useInview("about", 0.8);
   return (
-    <motion.div 
+    <motion.div
+    ref={ref} 
     initial={{opacity:0,y:100,scale:0}}
     animate={{opacity:1,y:0,scale:1}}
     transition={{delay:2.8,duration:1}}
-    
-    className="max-w-180 leading-7 mx-auto text-center flex flex-col items-center gap-4 mb-40">
+    id="about"
+    className="max-w-180 leading-7 mx-auto text-center flex flex-col items-center gap-4 mb-40 scroll-mt-40">
       <div className="capitalize text-2xl">About me</div>
       <p>
         After graduating with a degree in{" "}

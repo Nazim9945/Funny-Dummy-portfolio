@@ -14,7 +14,7 @@ const Header = () => {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.75 }}
     >
-      {["Home", "About", "Contact", "Projects", "Skills", "Experience"].map(
+      {["Home", "About", "Projects", "Skills", "Experience", "Contact"].map(
         (d) => {
           return (
             <motion.div

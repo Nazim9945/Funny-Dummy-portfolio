@@ -1,5 +1,6 @@
 import About from "./components/About";
 import DivElement from "./components/DivElement";
+import Experience from "./components/Experience";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import MyProjects from "./components/MyProjects";
@@ -22,6 +23,7 @@ function App() {
       {/* <DivElement/> */}
       <MyProjects/>
       <Skills/>
+      <Experience/>
       
     </main>
   );

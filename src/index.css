@@ -4,3 +4,6 @@
   --color-blue-primary:#dbd7fb;
   --color-gray-primary:#fbe2e3;
 }
+html{
+  --line-color:#fbe2e3
+}

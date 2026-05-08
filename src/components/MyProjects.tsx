@@ -1,6 +1,9 @@
 
 import Card from "./Card"
-import Profile from '../../public/Lady.jpg'
+import pick1 from '../../public/pick1.png'
+import pick2 from "../../public/pick2.png";
+import pick3 from "../../public/pick3.png";
+import pick4 from "../../public/pick4.png";
 
 import useInview from "../hooks/useInview";
 const CardData: {
@@ -16,7 +19,7 @@ const CardData: {
     description:
       "A modern portfolio website to showcase my projects, skills, and experience with smooth animations and responsive design.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    imageUrl: Profile,
+    imageUrl: pick1,
     index:true
   },
   {
@@ -24,7 +27,7 @@ const CardData: {
     description:
       "A full-stack e-commerce application with product listings, shopping cart, payment integration, and admin dashboard.",
     tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    imageUrl: Profile,
+    imageUrl: pick2,
     index:false
   },
   {
@@ -32,7 +35,7 @@ const CardData: {
     description:
       "A productivity app that helps users manage daily tasks with drag-and-drop features and real-time updates.",
     tags: ["React", "Firebase", "Redux", "Material UI"],
-    imageUrl: Profile,
+    imageUrl: pick3,
     index:true
   },
   {
@@ -40,7 +43,7 @@ const CardData: {
     description:
       "An analytics dashboard that visualizes social media metrics with interactive charts and performance insights.",
     tags: ["Vue.js", "Chart.js", "Express", "PostgreSQL"],
-    imageUrl: Profile,
+    imageUrl: pick4,
     index:false
   },
 ];

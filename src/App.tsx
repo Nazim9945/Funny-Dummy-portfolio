@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import DivElement from "./components/DivElement";
@@ -12,13 +12,20 @@ import Skills from "./components/Skills";
 import useSetTheme from "./hooks/useSetTheme";
 import { Context } from "./store/ContextApi";
 import ScrollToTop from "./components/ScrollToTop";
-
+import farmhouse from "../public/farmhouse.png";
+import { useDisableScroll } from "./hooks/useDisableScroll";
+import Popup from "./components/Popup";
+import sadLife from '../public/sadLife.png'
 function App() {
   const { theme, setTheme } = useSetTheme();
-const props=useContext(Context)
-useEffect(()=>{
-  window.location.hash=props?.tag || ""
-},[props?.tag])
+  const [open, setOpen] = useState(false);
+  const[linkOpen,setLinkOpen]=useState(false)
+  const props = useContext(Context);
+  useDisableScroll(open);
+
+  useEffect(() => {
+    window.location.hash = props?.tag || "";
+  }, [props?.tag]);
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
       window.history.scrollRestoration = "manual";
@@ -30,8 +37,25 @@ useEffect(()=>{
       <div className="bg-blue-700 absolute h-50 w-120 rounded-full rotate-45   top-50 blur-[7rem] right-100 border -z-10 dark:bg-blue-50"></div>
       <div className="bg-gray-primary absolute h-124 w-124 rounded-full -top-20 left-20 blur-[10rem] -z-10 dark:bg-[#946263]"></div>
       <div className="bg-blue-primary absolute h-130 w-124 rounded-full -top-10 right-20 blur-[10rem] -z-10 dark:bg-[#676394]"></div>
+
+      {open && <Popup close={()=>setOpen(false)} title={"FarmHouse Files 💀"} img={farmhouse}/>
+       }
+       {
+        linkOpen && <Popup close={()=>setLinkOpen(false)} title="Broke salmon bhoii 🥲" img={sadLife}/>
+       }
+
+       
       <Header />
-      <Hero />
+      <Hero
+      setLinkOpen={()=>{
+        setLinkOpen(true);
+        
+      }}
+        setOpen={() => {
+          setOpen(true);
+          
+        }}
+      />
       <DivElement />
       <About />
       <MyProjects />
@@ -40,7 +64,7 @@ useEffect(()=>{
       <Contact />
       <Footer />
       <LightDarkMode theme={theme} setTheme={setTheme} />
-      <ScrollToTop/>
+      <ScrollToTop />
     </main>
   );
 }

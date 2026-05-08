@@ -2,10 +2,15 @@ import { motion } from 'motion/react';
 import SalmonBhaoi from '../../public/salmonbhoi.jpg'
 import { FaArrowRight, FaDownload, FaGithub, FaLinkedin } from 'react-icons/fa';
 import useInview from '../hooks/useInview';
+import fahh from '../../public/fahhhhh.mp3'
+import hehehe from '../../public/hehehe.mp3'
+const fahhaudio=new Audio(fahh)
+const heheaudio=new Audio(hehehe)
+fahhaudio.volume=0.8
+heheaudio.volume=0.8
+const Hero=({setOpen,setLinkOpen}:{setOpen:()=>void,setLinkOpen:()=>void})=>{
+  
 
-
-
-const Hero=()=>{
   const { ref } = useInview("home", 0.7);
     return (
       <div
@@ -54,7 +59,13 @@ const Hero=()=>{
           transition={{ delay: 2.4, duration: 1 }}
           className="flex items-center justify-between gap-2 mt-10"
         >
-          <div className="bg-white text-black/80 px-4 py-2 group rounded-full flex items-center justify-center cursor-pointer dark:bg-black/80 dark:text-white ">
+          <div
+            className="bg-white text-black/80 px-4 py-2 group rounded-full flex items-center justify-center cursor-pointer dark:bg-black/80 dark:text-white "
+            onClick={() => {
+              fahhaudio.play();
+              setOpen();
+            }}
+          >
             <div>Contact me here</div>
             <span className="ml-1 group-hover:translate-x-1">
               <FaArrowRight />
@@ -66,7 +77,13 @@ const Hero=()=>{
               <FaDownload />
             </span>
           </div>
-          <div className="h-12 w-12  bg-white rounded-full p-4 flex items-center cursor-pointer dark:bg-black/80 dark:text-white">
+          <div
+            className="h-12 w-12  bg-white rounded-full p-4 flex items-center cursor-pointer dark:bg-black/80 dark:text-white"
+            onClick={() => {
+              heheaudio.play();
+              setLinkOpen();
+            }}
+          >
             <FaLinkedin className="text-2xl" />
           </div>
           <div className="h-12 w-12  bg-white rounded-full p-4 flex items-center cursor-pointer dark:bg-black/80 dark:text-white">

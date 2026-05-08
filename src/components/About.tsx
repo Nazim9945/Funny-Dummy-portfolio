@@ -22,8 +22,8 @@ const About = () => {
    
     id="about"
     className="max-w-180 leading-7 mx-auto text-center flex flex-col items-center gap-4 mb-40 scroll-mt-55">
-      <div className="capitalize text-2xl">About me</div>
-      <p>
+      <div className="capitalize sm:text-2xl">About me</div>
+      <p className="max-sm:text-xs max-sm:leading-7">
         After graduating with a degree in{" "}
         <span className="font-medium">Accounting</span>, I decided to pursue my
         passion for programming. I enrolled in a codingbootcamp and learned{" "}
@@ -39,7 +39,7 @@ const About = () => {
         <span className="font-medium">full-time position</span> as a software
         developer.
       </p>
-      <p>
+      <p className="max-sm:text-xs max-sm:leading-7">
         {" "}
         When I'm not coding, I enjoy playing video games, watching movies, and
         playing with my dog. I also enjoy learning new things. I am currently

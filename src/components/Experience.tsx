@@ -15,8 +15,8 @@ const Experience = ({theme}:{theme:string}) => {
  
     const { ref } = useInview("Experience", 0.4);
   return (
-    <div ref={ref} id="experience" className="mb-20 w-220 mx-auto scroll-mt-20">
-      <div className="text-2xl font-semibold  text-center mb-10">Experience</div>
+    <div ref={ref} id="experience" className="mb-20 sm:w-220 w-100 mx-auto scroll-mt-20">
+      <div className="sm:text-2xl text-xl font-semibold  text-center mb-10">Experience</div>
       <VerticalTimeline lineColor="">
         {ExperienceData.map(({ title, description, date, icon, location }) => {
           return (

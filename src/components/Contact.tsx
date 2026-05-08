@@ -4,9 +4,9 @@ import useInview from "../hooks/useInview";
 const Contact = () => {
     const {ref}=useInview("Contact",0.5)
   return (
-    <div ref={ref} id="contact" className="w-120 mx-auto flex flex-col items-center  mb-10 gap-2 scroll-mt-20">
+    <div ref={ref} id="contact" className="sm:w-120 w-90 mx-auto flex flex-col items-center  mb-10 gap-2 scroll-mt-20">
       <div className="flex items-center flex-col mb-5 gap-2">
-        <div className="text-2xl font-semibold">Contact</div>
+        <div className="sm:text-2xl text-xl font-semibold">Contact</div>
         <p className="text-gray-700 text-sm dark:text-gray-100">
           Please contact me directly at{" "}
           <a className="underline text-black dark:text-white/90">example@gmail.com</a> or through
@@ -15,10 +15,10 @@ const Contact = () => {
       </div>
       <input
         placeholder="Your Email"
-        className="w-full flex outline-none border border-gray-400 bg-white py-2 px-4 rounded-md dark:border-gray-500 dark:bg-black/90"
+        className="w-full flex outline-none border border-gray-400 bg-white sm:py-2 sm:px-4  p-2 rounded-md dark:border-gray-500 dark:bg-black/90"
       />
       <textarea
-        className=" w-full flex outline-none border border-gray-400 bg-white py-2 px-4 rounded-md dark:border-gray-600 dark:bg-black/90"
+        className=" w-full flex outline-none border border-gray-400 bg-white sm:py-2 sm:px-4 p-2  rounded-md dark:border-gray-600 dark:bg-black/90"
         rows={10}
         name=""
         id=""

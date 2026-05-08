@@ -16,6 +16,7 @@ import farmhouse from "../public/farmhouse.png";
 import { useDisableScroll } from "./hooks/useDisableScroll";
 import Popup from "./components/Popup";
 import sadLife from '../public/sadLife.png'
+import Blurred from "./components/Blurred";
 function App() {
   const { theme, setTheme } = useSetTheme();
   const [open, setOpen] = useState(false);
@@ -33,27 +34,31 @@ function App() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
   return (
-    <main className="text-gray-950  pt-35 dark:text-gray-50 dark:bg-gray-900 dark:opacity-90 relative">
-      <div className="bg-blue-700 absolute h-50 w-120 rounded-full rotate-45   top-50 blur-[7rem] right-100 border -z-10 dark:bg-blue-50"></div>
-      <div className="bg-gray-primary absolute h-124 w-124 rounded-full -top-20 left-20 blur-[10rem] -z-10 dark:bg-[#946263]"></div>
-      <div className="bg-blue-primary absolute h-130 w-124 rounded-full -top-10 right-20 blur-[10rem] -z-10 dark:bg-[#676394]"></div>
+    <main className="text-gray-950  sm:pt-35 pt-20 dark:text-gray-50 dark:bg-gray-900 dark:opacity-90 relative overflow-x-hidden">
+      <Blurred/>
 
-      {open && <Popup close={()=>setOpen(false)} title={"FarmHouse Files 💀"} img={farmhouse}/>
-       }
-       {
-        linkOpen && <Popup close={()=>setLinkOpen(false)} title="Broke salmon bhoii 🥲" img={sadLife}/>
-       }
+      {open && (
+        <Popup
+          close={() => setOpen(false)}
+          title={"FarmHouse Files 💀"}
+          img={farmhouse}
+        />
+      )}
+      {linkOpen && (
+        <Popup
+          close={() => setLinkOpen(false)}
+          title="Broke salmon bhoii 🥲"
+          img={sadLife}
+        />
+      )}
 
-       
       <Header />
       <Hero
-      setLinkOpen={()=>{
-        setLinkOpen(true);
-        
-      }}
+        setLinkOpen={() => {
+          setLinkOpen(true);
+        }}
         setOpen={() => {
           setOpen(true);
-          
         }}
       />
       <DivElement />

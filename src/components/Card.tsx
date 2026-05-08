@@ -29,10 +29,10 @@ const Card = ({title,description,tags,index,imageUrl}:Props) => {
     >
       <div className="flex flex-col justify-between w-[60%]">
         <div className="gap-2 flex flex-col">
-          <div className="text-2xl mb-2 font-medium dark:text-white/90">
+          <div className="sm:text-2xl max-sm:text-xl mb-2 font-medium dark:text-white/90">
             {title}
           </div>
-          <div className="text-xl leading-8 mt-4 text-gray-500 dark:text-gray-300">
+          <div className="sm:text-xl max-sm:text-xs sm:leading-8 max-sm:leading-5 mt-4 max-sm:mb-5 text-gray-500 dark:text-gray-300">
             {description}
           </div>
         </div>

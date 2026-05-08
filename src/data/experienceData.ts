@@ -36,5 +36,5 @@ export const ExperienceData = [
     icon: React.createElement(LuGraduationCap),
     date: "2022",
   },
-] as const;
+]
 

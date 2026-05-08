@@ -1,3 +1,9 @@
+
+
+https://github.com/user-attachments/assets/c9a7fdad-0187-46a5-b5c5-34629af7c41a
+
+
+
 # Portfolio
 
 A clean and simple portfolio website made with React, TypeScript, Vite, and Tailwind CSS.

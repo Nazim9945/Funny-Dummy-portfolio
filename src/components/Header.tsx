@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <motion.div
-      className="fixed left-1/2 -translate-x-1/2 top-0 rounded-none h-10 bg-white/50 border border-white/80 shadow-md shadow-black/20  backdrop-blur-3xl sm:top-4 sm:rounded-full sm:w-140 flex justify-between items-center px-3 w-full z-99"
+      className="fixed left-1/2 -translate-x-1/2 top-0 rounded-none h-10 bg-white/50 border border-white/80 shadow-md shadow-black/20  backdrop-blur-3xl sm:top-4 sm:rounded-full sm:w-140 flex justify-between items-center px-3 w-full z-99 dark:bg-black/90 dark:border-gray-500"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.75 }}
@@ -21,7 +21,7 @@ const Header = () => {
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className={`transition-all duration-300 cursor-pointer hover:bg-gray-200 text-gray-500 hover:text-black rounded-full px-4 py-1 ${props?.tag.toLowerCase() === d.toLowerCase() && "bg-gray-200 text-black"}`}
+              className={`transition-all duration-300 cursor-pointer  text-black dark:text-white/90 hover:text-gray-400 hover:dark:text-gray-400 rounded-full px-4 py-1 ${props?.tag.toLowerCase() === d.toLowerCase() && "bg-gray-200 dark:bg-gray-800"}`}
               key={d}
               onClick={() => props?.setTag(d)}
             >

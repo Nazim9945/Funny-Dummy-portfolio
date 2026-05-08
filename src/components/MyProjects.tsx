@@ -51,7 +51,7 @@ const MyProjects = () => {
       <div className="text-2xl text-center mb-8">My Projects</div>
       <div className="flex flex-col gap-8">
         {CardData.map((data) => {
-          return <Card {...data}/>;
+          return <Card key={data.title} {...data}/>;
         })}
       </div>
     </div>

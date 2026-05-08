@@ -9,7 +9,10 @@ import { ExperienceData } from "../data/experienceData";
 import React from "react";
 import useInview from "../hooks/useInview";
 
-const Experience = () => {
+
+const Experience = ({theme}:{theme:string}) => {
+  
+ 
     const { ref } = useInview("Experience", 0.4);
   return (
     <div ref={ref} id="experience" className="mb-20 w-220 mx-auto scroll-mt-20">
@@ -21,6 +24,8 @@ const Experience = () => {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 contentStyle={{
+                  background: theme === "light" ? "white" : "black",
+                  color: theme === "light" ? "black" : "white",
                   boxShadow: "none",
                   border: "1px solid rgba(0, 0, 0, 0.05)",
                   textAlign: "left",
@@ -31,15 +36,15 @@ const Experience = () => {
                   borderRight: "0.4rem solid #9ca3af",
                 }}
                 iconStyle={{
-                  background:"white" ,
-                fontSize: "0.7rem",
+                  background: theme == "light" ? "white" : "black",
+                  fontSize: "0.7rem",
                 }}
                 date={date}
                 icon={icon}
               >
                 <div className="font-semibold capitalize">{title}</div>
                 <div className="font-normal">{description}</div>
-                <div className="text-gray-700 font-normal mt-1">{location}</div>
+                <div className="text-gray-700 font-normal mt-1 dark:text-gray-200">{location}</div>
               </VerticalTimelineElement>
             </React.Fragment>
           );

@@ -25,29 +25,28 @@ const Card = ({title,description,tags,index,imageUrl}:Props) => {
         scale: scaleProgress,
         opacity: scaleProgress,
       }}
-      className={` ${!index ? "flex-row-reverse bg-gray-50" : "bg-gray-100"}    flex justify-between w-full  p-4 gap-2 rounded-md overflow-hidden group`}
+      className={` ${!index ? "flex-row-reverse bg-gray-50 dark:bg-gray-800" : "bg-gray-100 dark:bg-gray-950"}    flex justify-between w-full  p-4 gap-2 rounded-md overflow-hidden group`}
     >
       <div className="flex flex-col justify-between w-[60%]">
         <div className="gap-2 flex flex-col">
-          <div className="text-2xl mb-2 font-medium">{title}</div>
-          <div className="text-xl leading-8 mt-4 text-gray-500">
+          <div className="text-2xl mb-2 font-medium dark:text-white/90">
+            {title}
+          </div>
+          <div className="text-xl leading-8 mt-4 text-gray-500 dark:text-gray-300">
             {description}
           </div>
         </div>
 
         <div className="flex flex-wrap gap-2 mb-5">
           {tags.map((d) => {
-            return <TagButton text={d} />;
+            return <TagButton key={d} text={d} />;
           })}
         </div>
       </div>
       <div
-        className={`w-[40%] relative ${index ? "left-20 rotate-15" : "-left-20 -rotate-15"} group-hover:left-0 group-hover:rotate-0  rounded-lg transition-all duration-1000`}
+        className={`w-[40%] relative ${index ? "left-20 rotate-15" : "-left-20 -rotate-15"} group-hover:left-0 group-hover:rotate-0  rounded-md transition-all duration-1000 overflow-hidden shadow-lg shadow-gray-900 dark:shadow-gray-600`}
       >
-        <img
-          src={imageUrl}
-          className=" shadow-lg shadow-gray-400 w-full h-full "
-        />
+        <img src={imageUrl} className="  w-full h-full " />
       </div>
     </motion.div>
   );

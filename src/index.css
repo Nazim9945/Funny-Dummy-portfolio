@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
 @theme{
   --color-blue-primary:#dbd7fb;
   --color-gray-primary:#fbe2e3;
 }
 html{
-  --line-color:#fbe2e3
+  --line-color:#fbe2e3  
 }
+

@@ -66,13 +66,13 @@ const Hero=({setOpen,setLinkOpen}:{setOpen:()=>void,setLinkOpen:()=>void})=>{
               setOpen();
             }}
           >
-            <div className='max-sm:text-xs'>Contact me here</div>
+            <div className="max-sm:text-xs">Contact me here</div>
             <span className="ml-1 group-hover:translate-x-1">
               <FaArrowRight />
             </span>
           </div>
           <div className="bg-white text-black/80 sm:px-4 sm:py-2 max-sm:p-2  rounded-full flex items-center justify-center cursor-pointer dark:bg-black/80 dark:text-white">
-            <div className='max-sm:text-xs'> Download CV </div>
+            <div className="max-sm:text-xs"> Download CV </div>
             <span className="ml-1">
               <FaDownload />
             </span>
@@ -87,7 +87,14 @@ const Hero=({setOpen,setLinkOpen}:{setOpen:()=>void,setLinkOpen:()=>void})=>{
             <FaLinkedin className="sm:text-2xl text-xs" />
           </div>
           <div className="sm:h-12 sm:w-12 w-6 h-6  bg-white rounded-full sm:p-4 max-sm:p-2 flex items-center cursor-pointer dark:bg-black/80 dark:text-white">
-            <FaGithub className="sm:text-2xl" />
+            
+              <FaGithub onClick={()=>{
+                window.open(
+                  "https://github.com/Nazim9945/Funny-Dummy-portfolio",
+                  "_blank",
+                );
+              }} className="sm:text-2xl" />
+            
           </div>
         </motion.div>
       </div>
